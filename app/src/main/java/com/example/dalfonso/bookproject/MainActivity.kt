@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             saveButton.setOnClickListener {
 
                 if (nameBookEditText.text?.isEmpty() == true ||
-                    nameAuthorEditText.text?.isEmpty() == true ||
+                    nameAuthorEditText.text.isEmpty()  ||
                     pagesEditText.text?.isEmpty() == true
                 ) {
                     Toast.makeText(
