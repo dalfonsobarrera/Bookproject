@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                 }   else{
 
                     val nameBook: String = nameBookEditText.text.toString()
-                    val author = nameAuthorEditText.text.toString()
+                    val author = nameAuthorEditText.text?.toString()
                     val pages = pagesEditText.text .toString().toInt()
                     val abstract = abstractEditText.text.toString()
 
