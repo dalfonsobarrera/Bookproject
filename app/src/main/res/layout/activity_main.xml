@@ -14,18 +14,18 @@
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/title_text_view"
-        style="@style/TextViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="Registro de un Libro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/title_text_view"
+            style="@style/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/register_book"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/name_author_edit_text"
@@ -45,14 +45,14 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
-        android:id="@+id/name_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Nombre"
-        app:layout_constraintBottom_toBottomOf="@+id/name_book_edit_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/name_book_edit_text" />
+            android:id="@+id/name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/book_name"
+            app:layout_constraintBottom_toBottomOf="@+id/name_book_edit_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name_book_edit_text" />
 
     <EditText
         android:id="@+id/name_book_edit_text"
@@ -252,7 +252,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
-                android:text="@string/number_five" />
+                android:text="@string/number_five"
+                android:textColor="#2E7D32"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
         </RadioGroup>
 
         <TextView
@@ -277,7 +279,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/publication_date_text_view"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            tools:ignore="TextContrastCheck" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
