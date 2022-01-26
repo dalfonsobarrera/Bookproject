@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
             saveButton.setOnClickListener {
 
-                if (nameBookEditText.text?.isEmpty() == true ||
+                if (nameBookEditText.text.isEmpty()  ||
                     nameAuthorEditText.text.isEmpty()  ||
                     pagesEditText.text?.isEmpty() == true
                 ) {
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                 }   else{
 
                     val nameBook: String = nameBookEditText.text.toString()
-                    val author = nameAuthorEditText.text?.toString()
+                    val author = nameAuthorEditText.text.toString()
                     val pages = pagesEditText.text .toString().toInt()
                     val abstract = abstractEditText.text.toString()
 
