@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
             saveButton.setOnClickListener {
 
-                if (nameBookEditText?.text?.isEmpty() == true ||
+                if (nameBookEditText.text?.isEmpty() == true ||
                     nameAuthorEditText.text?.isEmpty() == true ||
                     pagesEditText.text?.isEmpty() == true
                 ) {
