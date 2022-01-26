@@ -2,7 +2,6 @@ package com.example.dalfonso.bookproject
 
 import android.app.DatePickerDialog
 import android.os.Bundle
-import android.widget.DatePicker
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dalfonso.bookproject.databinding.ActivityMainBinding
@@ -50,9 +49,9 @@ class MainActivity : AppCompatActivity() {
 
             saveButton.setOnClickListener {
 
-                if (nameBookEditText.text?.isEmpty() == true||
-                    nameAuthorEditText.text?.isEmpty() == true||
-                        pagesEditText.text?.isEmpty() == true
+                if (nameBookEditText?.text?.isEmpty() == true ||
+                    nameAuthorEditText.text?.isEmpty() == true ||
+                    pagesEditText.text?.isEmpty() == true
                 ) {
                     Toast.makeText(
                         applicationContext,"Debe digitar nombre, autor y número de páginas",
@@ -71,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                     if (infantileCheckBox.isChecked) genre += " Infantil "
                     if (fictionCheckBox.isChecked) genre += " Ficción "
 
-                    var score = when {
+                    val score= when {
                         oneRadioButton.isChecked -> 1
                         twoRadioButton.isChecked -> 2
                         threeRadioButton.isChecked -> 3
@@ -83,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-                infoTextView.text = getString(R.string.info,nameBook, author, pages, abstract, genre, score)
+                    infoTextView.text = getString(R.string.info,nameBook, author, pages, abstract, genre, score, publicationDate)
                 }
             }
 
